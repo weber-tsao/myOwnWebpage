@@ -1,0 +1,10 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html, body {
+    font-family: Candara;
+    font-size: 18pt;
+    height: 100%;
+}
