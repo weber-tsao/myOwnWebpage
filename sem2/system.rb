@@ -20,7 +20,8 @@ post "/login" do
      end
 end
 
-get "/mainPage" do 
+get "/mainPage" do
+       @bookname = Users.displayName db
        erb :mainPage
 end
 
@@ -40,3 +41,4 @@ post "/register" do
        puts "create error"
      end
 end
+

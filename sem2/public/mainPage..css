@@ -8,3 +8,7 @@ html, body {
     font-size: 18pt;
     height: 100%;
 }
+
+h1{
+  color: blue;
+}

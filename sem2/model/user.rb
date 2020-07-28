@@ -24,6 +24,15 @@ module Users
         result = db.execute query, name, email, password
   end
   
-  
-
+  def Users.displayName(db)
+    db = SQLite3::Database.new 'username_1.sqlite'
+    query = "SELECT name FROM bookList"
+    booknameList = db.execute query
+    
+    bookname = Array.new(booknameList.length)
+    (0...booknameList.length).each do |i|
+      bookname[i] = booknameList[i][0]
+    end
+    return bookname
+  end
 end
