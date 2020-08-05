@@ -11,5 +11,14 @@
     <p>Book List: <%= bookname %></p>
   </div>
   <% end %>
+  <form method="get" action="/mainPage">
+  <div>
+    <label for="search"> Search: </label>
+    <br/>
+    <input name="searchinput" placeholder="Search for..." type="message" >
+    <input id="submit" type="submit" value="Search">
+    <p>Search result: <%= @searchinput %></p>
+  </div>
+  </form>
 </body>
 </html>

@@ -22,6 +22,8 @@ end
 
 get "/mainPage" do
        @bookname = Users.displayName db
+       @searchinput = params[:searchinput]
+       puts @searchinput
        erb :mainPage
 end
 
