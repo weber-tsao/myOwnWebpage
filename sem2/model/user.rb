@@ -35,4 +35,16 @@ module Users
     end
     return bookname
   end
+  
+  def Users.search(db, name)
+    db = SQLite3::Database.new 'username_1.sqlite'
+    query = 'SELECT category FROM bookList WHERE name LIKE "%" || ? || "%"'
+    bookcategory = db.execute query, name
+    if bookcategory.length > 0
+      return bookcategory[0][0]
+    else
+      return 0
+    end
+  end
+  
 end

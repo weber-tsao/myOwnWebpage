@@ -23,7 +23,13 @@ end
 get "/mainPage" do
        @bookname = Users.displayName db
        @searchinput = params[:searchinput]
-       puts @searchinput
+       @searchresult = Users.search db, @searchinput
+ 
+       if @searchresult == 0
+         @searching = ""
+       else @searchresult != 0
+         @searching = @searchresult
+       end
        erb :mainPage
 end
 
